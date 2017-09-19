@@ -24,3 +24,9 @@ Route::get('users', function()
 });
 
 Route::get('/contact', 'HomeController@contact');
+
+Route::prefix('users')->group(function () {
+    Route::get ('/',        'UserController@index');
+    Route::get ('/create',  'UserController@create')->name('users.create');
+    Route::post('/',        'UserController@store');
+});
