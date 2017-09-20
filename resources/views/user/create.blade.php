@@ -20,7 +20,7 @@
     <div class="create-form full-height content">
         <h1>Create new user</h1>
         {!! Form::open(['url' => 'users']) !!}
-        {!! Form::text('username', ['placeholder' => 'Username']) !!}
+        {!! Form::text('name', ['placeholder' => 'Username']) !!}
         <span>{{ $errors ->first('username') }}</span>
         {!! Form::password('password', 'password') !!}
         <span>{{ $errors ->first('password') }}</span>
