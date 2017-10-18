@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        Chofl
+                        {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
 

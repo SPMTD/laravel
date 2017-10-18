@@ -23,14 +23,24 @@ Route::get('users', function()
     return View::make('users')->with('users', $users);
 });
 
-Route::get('/contact', 'HomeController@contact');
-
-Route::prefix('users')->group(function () {
-    Route::get ('/',        'UserController@index');
-    Route::get ('/create',  'UserController@create')->name('users.create');
-    Route::post('/',        'UserController@validator');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/contact', 'HomeController@contact');
+
+Route::get('post/{id}', function () {
+   return view('/post/{id}');
+});
+
+Route::get('admin', function (){
+    return view('admin.index');
+});
+
+Route::get('admin/create', function () {
+    return view('admin.create');
+});
+
+Route::get('admin/edit/{id}', function() {
+    return view('admin.edit');
+});

@@ -7,6 +7,14 @@ html, body {
     margin: 0;
 }
 
+.nav-bar {
+    position: fixed;
+    top: 1px;
+    background-color: lightgray;
+    width: 100vw;
+    height: 60px;
+}
+
 .full-height {
     height: 100vh;
 }
@@ -28,11 +36,17 @@ html, body {
 }
 
 .content {
+    height: 89.5vh;
+    width: 90vh;
+    margin: 70px 0 0 0;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
     text-align: center;
 }
 
 .title {
-    font-size: 84px;
+    font-size: 50px;
 }
 
 .links > a {
