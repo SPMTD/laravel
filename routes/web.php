@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Route::get('/upload', 'HomeController@upload')->name('upload');
 
+Route::post('uploaded', 'HomeController@uploadPicture')->name('uploaded');
+
 Route::get('users', function()
 {
     $users = User::all();

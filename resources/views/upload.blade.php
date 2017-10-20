@@ -34,8 +34,16 @@
         </div>
     @endif
     <div class="wrapper">
-        <div class="content">
-
+        <div class="upload-content">
+            <h1>File Upload</h1>
+            <form action="{{ URL::to('uploaded') }}" method="post" enctype="multipart/form-data">
+                Title:
+                <input type="text" name="title" id="title">
+                Select image to upload:
+                <input type="file" name="file" id="file">
+                <input type="submit" value="Upload" name="submit">
+                <input type="hidden" value="{{ csrf_token() }}" name="_token">
+            </form>
         </div>
     </div>
 
