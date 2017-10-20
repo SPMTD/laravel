@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/upload', 'HomeController@upload')->name('upload');
 
 Route::get('users', function()
 {
